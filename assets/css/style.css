@@ -1,0 +1,231 @@
+@font-face {
+  font-family: MerriweatherBold;
+  src: url(/assets/fonts/Merriweather-Bold.ttf);
+}
+@font-face {
+  font-family: MerriweatherRegular;
+  src: url(/assets/fonts/Merriweather-Regular.ttf);
+}
+/* Osztályok full page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  transition: all 0.5s ease-in-out;
+  font-family: MerriweatherRegular;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.alignCent {
+  align-items: center;
+}
+.justyCenter {
+  justify-content: center;
+}
+.justyFlexEnd {
+  justify-content: flex-end;
+}
+.justySpAr {
+  justify-content: space-around;
+}
+.marginBottItems {
+  margin-bottom: 4rem;
+}
+.margin1vh {
+  margin: 1vh 1vw;
+  color: aliceblue;
+}
+.boxshadow {
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+}
+.borderRadius {
+  border-radius: 4px;
+}
+.cursorPointer {
+  cursor: pointer;
+}
+
+/* fullPage */
+body {
+background: hsla(0, 0%, 99%, 1);
+background: radial-gradient(circle, hsla(0, 0%, 99%, 1) 0%, hsla(0, 0%, 70%, 1) 100%);
+background: -moz-radial-gradient(circle, hsla(0, 0%, 99%, 1) 0%, hsla(0, 0%, 70%, 1) 100%);
+background: -webkit-radial-gradient(circle, hsla(0, 0%, 99%, 1) 0%, hsla(0, 0%, 70%, 1) 100%);
+}
+
+#fullPage {
+  height: 100vh;
+}
+/* Galery container */
+
+#galeryContainer {
+  width: 80%;
+  height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+#arrowLeft {
+  border-radius: 4px 0 0 4px;
+}
+#arrowRight {
+  border-radius: 0 4px 4px 0;
+}
+#arrowLeft, #arrowRight {
+  width: 5%;
+  background: hsla(0, 0%, 100%, 1);
+  background: linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 86%, 1) 100%);
+  background: -moz-linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 86%, 1) 100%);
+  background: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 86%, 1) 100%);
+}
+#arrowLeft:hover img, #arrowRight:hover img {
+  filter: invert(79%) sepia(9%) saturate(95%) hue-rotate(1deg) brightness(84%) contrast(89%);
+}
+
+#picsContainer {
+  width: 90%;
+}
+.picsItems {
+  max-height: 0px;
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+}
+.picsItems.active {
+  max-height: 1000px;
+}
+.arrows {
+  rotate: 0deg;
+  width: 2.5rem;
+  filter: invert(11%) sepia(13%) saturate(412%) hue-rotate(190deg) brightness(91%) contrast(96%);
+}
+#rightArrow {
+  rotate: 180deg;
+}
+.bigPics {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  background-color: black;
+}
+.bigPicsImg {
+  display: block;
+  margin: 0 auto;
+  height: 50vh;
+}
+.picsText {
+  z-index: 0;
+  position: relative;
+  top: 34.2vh;
+  height: 20vh;
+  overflow: scroll;
+  background:#7f7f7f;
+  background:rgba(0,0,0,0.5);
+}
+
+/* Slider */
+
+#slider {
+  width: 60vw;
+  margin: 0 auto 4rem auto;
+}
+.sliderPic {
+  position: relative;
+  transform: translateY(0rem);
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+  border: 4px solid white;
+  background-color: white;
+}
+.sliderPic.active {
+  transform: translateY(-0.3rem);
+}
+.sliderPic::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 8px;
+  width: 3.5rem;
+  height: 2px;
+  box-shadow: 0px 11px 4px black;
+}
+.sliderPic.active::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 8px;
+  width: 3.5rem;
+  height: 5px;
+  box-shadow: 0px 11px 4px black;
+}
+
+.sliderPic.active::before {
+  content: '';
+  position: absolute;
+  top: -19px;
+  left: 32px;
+  width: 0;
+  height: 0;
+  rotate: 90deg;
+  border-top: 10px solid transparent;
+  border-right: 10px solid white;
+  border-bottom: 10px solid transparent;
+}
+
+.miniPics {
+  display: block;
+  margin: 0 auto;
+  height: 4.5rem;
+}
+.titlePics {
+  z-index: 100;
+  position: absolute;
+  top: -4rem;
+  left: -1rem;
+  width: 0rem;
+  color: white;
+  background-color: black;
+  font-size: 0.6rem;
+  padding: 6px;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0;
+}
+.titlePics.active {
+  opacity: 1;
+  overflow: visible;
+  z-index: 100;
+  position: absolute;
+  top: -4rem;
+  left: -1rem;
+  width: 7rem;
+  color: white;
+  background-color: black;
+  font-size: 0.6rem;
+  padding: 6px;
+  text-align: center;
+}
+.titlePics.active::after {
+  z-index: 100;
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50px;
+  width: 0;
+  height: 0;
+  rotate: 270deg;
+  border-top: 10px solid transparent;
+  border-right: 10px solid black;
+  border-bottom: 10px solid transparent;
+}
