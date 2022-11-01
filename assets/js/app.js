@@ -1,26 +1,26 @@
 let picsObj=[
    {
-     src:"/assets/pic/allatok02.jpg",
+     src:"assets/pic/allatok02.jpg",
      title:"India futókacsák",
      text:"Az indiai futókacsák különösen hasznos állatok. Kedvenc eledelük a spanyol mesztelencsigák, de ezen kívűl mindenféle csigákat és rovarokat esznek"
    },
   {
-    src:"/assets/pic/csalamade02.jpg",
+    src:"assets/pic/csalamade02.jpg",
     title:"Csalamádé alapanyagok I",
     text:"A házi csalamádénál nincs finomabb! Minél több féle zöldség van benne, annál jobb lesz az eredmény!"
   },
   {
-    src:"/assets/pic/csalamade03.jpg",
+    src:"assets/pic/csalamade03.jpg",
     title:"Csalamádé alapanyagok II",
     text:"A házi csalamádénál nincs finomabb! A paprika az egyik legfontosabb alapanyaga"
   },
   {
-    src:"/assets/pic/himes03.jpg",
+    src:"assets/pic/himes03.jpg",
     title:"Himesháza utcai dekoráció",
     text:"Himesháza egy baranyai falu. Főleg svábok lakják. Vajon ki született Himesházzán, akit sokan ismernek?  "
   },
   {
-    src:"/assets/pic/himes04.jpg",
+    src:"assets/pic/himes04.jpg",
     title:"Himesháza buszmegálló",
     text:"Ha sokat kellene várni a buszra... .  "
   },
