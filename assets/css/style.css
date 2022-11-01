@@ -1,10 +1,10 @@
 @font-face {
   font-family: MerriweatherBold;
-  src: url(/assets/fonts/Merriweather-Bold.ttf);
+  src: url(assets/fonts/Merriweather-Bold.ttf);
 }
 @font-face {
   font-family: MerriweatherRegular;
-  src: url(/assets/fonts/Merriweather-Regular.ttf);
+  src: url(assets/fonts/Merriweather-Regular.ttf);
 }
 /* Osztályok full page */
 * {
