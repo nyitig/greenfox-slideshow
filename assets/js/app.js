@@ -45,7 +45,7 @@ addClickEventsLeftArrow()
 addClickEventsRightArrow()
 
 
-
+// Nagykép konténer létrehozása
 function createBigPicsContainer() {
     picsObj.map((picObj)=> {
     htmlTemplate+=`
@@ -65,7 +65,7 @@ elementNumber++
   htmlTemplate=``
   elementNumber--
 }
-
+// Slider konténer létrehozása
 function createSliderContainer() {
   picsObj.map((picsObj)=> {
     htmlTemplate+=`
@@ -81,7 +81,7 @@ function createSliderContainer() {
   sliders.innerHTML=htmlTemplate
   htmlTemplate=``
 }
-
+// Az aktuális nagyképet mutatja meg, az összes többit elrejti
 function seeActivePics(params) {
   const picsItems=document.querySelectorAll('.picsItems')
   for (let index = 0; index < picsItems.length; index++) {
@@ -93,7 +93,7 @@ function seeActivePics(params) {
     }
   }
 }
-
+// A slider-en az aktuális képet "aktiválja"
 function activatedSilderDivs(params) {
   const sliderPic=document.querySelectorAll('.sliderPic')
   for (let index = 0; index < sliderPic.length; index++) {
@@ -105,7 +105,8 @@ function activatedSilderDivs(params) {
     }
   }
 }
-
+// A slideren található képekhez klikk eseményt adunk. Ha ráklikkel, akkor mind a nagykép,mind a slider kép
+// "aktív" állapotba kerül
 function addClickEventSliderDivs(params) {
   const sliderPic=document.querySelectorAll('.sliderPic')
   sliderPic.forEach((val, ind) => {
@@ -116,7 +117,7 @@ function addClickEventSliderDivs(params) {
     })
   })
 }
-
+// Ha a slider egyik képére rámegyünk az egérrel, ill ha lemegyünk róla...
 function addSliderHover() {
   const sliderPic=document.querySelectorAll('.sliderPic')
   const titlePics=document.querySelectorAll('.titlePics')
@@ -139,7 +140,7 @@ function addSliderHover() {
     })
   }
 }
-
+// bal nyílra ha rákattintunk...
 function addClickEventsLeftArrow() {
   arrowLeft.addEventListener("click", ()=> {
     if (counter==0) {
@@ -154,7 +155,7 @@ function addClickEventsLeftArrow() {
     }
   })
 }
-
+// jobb nyílra ha rákattintunk
 function addClickEventsRightArrow() {
   arrowRight.addEventListener("click", ()=> {
     if (counter==elementNumber) {

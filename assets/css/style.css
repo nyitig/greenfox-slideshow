@@ -69,7 +69,7 @@ background: -webkit-radial-gradient(circle, hsla(0, 0%, 99%, 1) 0%, hsla(0, 0%, 
 /* Galery container */
 
 #galeryContainer {
-  width: 80%;
+  width: 87%;
   height: 50vh;
   margin-left: auto;
   margin-right: auto;
@@ -188,6 +188,7 @@ background: -webkit-radial-gradient(circle, hsla(0, 0%, 99%, 1) 0%, hsla(0, 0%, 
   margin: 0 auto;
   height: 4.5rem;
 }
+/* title hover menu */
 .titlePics {
   z-index: 100;
   position: absolute;
